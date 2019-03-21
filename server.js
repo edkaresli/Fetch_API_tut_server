@@ -16,6 +16,11 @@ app.get('/', (req, res) => {
 
 });
 
+app.get('/users', (req, res) => {
+  console.log("Receiving GET request on /users");
+  res.json({ "getUsers": "Success!" });
+});
+
 const port = 5000;
 
 app.listen(port, '127.0.0.1', () => {
