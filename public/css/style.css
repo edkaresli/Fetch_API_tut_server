@@ -1,0 +1,203 @@
+* {
+    margin: 0px;
+  }
+  
+  body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  h1, h2 {
+    margin: 10px;
+  }
+  
+  #container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* grid-template-rows: minmax(100px, auto); */
+    grid-gap: 5px;
+    grid-template-areas: 
+    "header header header header header header header header header header header header"
+    "header header header header header header header header header header header header"
+    "nav nav nav main main main main main main main main main"
+    "nav nav nav main main main main main main main main main"
+    "nav nav nav main main main main main main main main main"
+    "nav nav nav main main main main main main main main main"
+    "nav nav nav main main main main main main main main main"
+    "nav nav nav main main main main main main main main main"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+  
+  }
+  
+  header {
+    grid-area: header;
+    border-style: solid; 
+    border-color: #000;
+    border-width: 1px;
+    min-height: 100px;
+    color: #fff;
+    background-color: #00ccff;
+    text-align: center;
+  }
+  
+  nav {
+    grid-area: nav;
+    border-style: solid; 
+    border-color: #000;
+    border-width: 1px;
+    color: #fff;
+    background-color: #00ccff;
+  }
+  
+  main {
+    grid-area: main; 
+    border-style: solid; 
+    border-color: #000;
+    border-width: 1px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #fff;
+    background-color: #00ccff;
+  }
+  
+  footer {
+    grid-area: footer;
+    border-style: solid; 
+    border-color: #000;
+    border-width: 1px;
+    color: #fff;
+    background-color: #00ccff;
+  }
+  
+  nav ul li {
+    display: block;
+  }
+  
+  button {
+    margin: 20px;
+    background-color: #0073e6;
+    color: rgb(255, 255, 255);
+    border-style: none;
+    cursor: pointer;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  
+  nav button {
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+  }
+  
+  button:hover, button:focus {
+    background-color: #3287db;
+    color: #ffbd66;
+  }
+  
+  button:active {
+    transform: scale(0.90);
+  }
+  
+  .card {
+    background-color: #000099;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px;
+    background-image: linear-gradient(#3333ff, #000099);
+    border-radius: 20px;
+    transition: transform 250ms ease;
+    font-size: 18;
+  }
+  
+  .card h4 {
+    font-size: 24;
+  }
+  
+  .card button {
+    font-size: 10px;
+    width: 50px;
+    height: 30px;
+    border-radius: 20px;
+    background-image: linear-gradient(#d1d1e0, #47476b);
+  }
+  
+  .card:hover {
+    background-color: #0000ff;
+    transform: scale(1.2);
+  }
+  
+  .close-button {
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close-button:hover, .close-button:focus {
+    color: #ff0000;
+    cursor: pointer;
+  }
+  
+  /* Full-width input fields */
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .modal-form {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(82, 82, 122, 0.4);
+    color:  #f0f0f5;
+    padding-top: 50px;
+  }
+  
+  .modal-content {
+    background-color: #b7d9f7;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 5px 10px 10px #ade4f1;
+  }
+  
+  .modal-content div {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .modal-content h4 {
+    color: black;
+    margin-left: 40%;
+    margin-top: 20px;
+  }
+  
+  .modal-content label {
+    color: black;
+    margin-left: 10px;
+  }
+  
+  .modal-content div button {
+    width: 48%;
+    border-radius: 20px;
+    height: 40px;
+  }
+  
+  .modal-content div button:hover {
+    opacity: 0.8;
+  }
