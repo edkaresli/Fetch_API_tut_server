@@ -10,7 +10,6 @@ User.init({
   web: { type: DB.Sequelize.STRING, allowNull: false }
 }, { sequelize, timestamps: false });
 
-module.exports = User;
 /*
 {
     constructor(uname, realname, email, web) {
