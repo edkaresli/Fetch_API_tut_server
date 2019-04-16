@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 
 });
 
-app.get('/users', (req, res) => {
+app.get('/api/users', (req, res) => {
   console.log("Receiving GET request on /users");
   res.json({ "getUsers": "Success!" });
 });
