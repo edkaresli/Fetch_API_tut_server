@@ -22,5 +22,8 @@ module.exports = (sequelize, type) => {
             type: type.STRING,
             allowNull: false
         }
+    }, 
+    {
+        timestamps: false
     })   
 }
