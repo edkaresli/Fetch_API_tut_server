@@ -9,9 +9,8 @@ const password = dbconfig.POSTGRES_PASSWORD;
 const dbname = dbconfig.POSTGRES_DB_NAME;
 
 const sequelize = new Sequelize(`postgres://${dbuser}:${password}@${uri}:${port}/${dbname}`);
-const DB = {Sequelize, sequelize};
 
-const User = new UserModel(sequelize, Sequelize);
+const User = UserModel(sequelize, Sequelize);
 
 sequelize.sync({ force: true })
   .then(() => {
